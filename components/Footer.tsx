@@ -5,7 +5,7 @@ import { Facebook, Instagram, Twitter, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-10 mt-16">
+    <footer className="bg-primary text-primary-foreground py-10">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Quick Links */}
         <div>
