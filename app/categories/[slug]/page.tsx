@@ -1,15 +1,15 @@
-//app/categories/[slug]/page.tsx
+// app/categories/[slug]/page.tsx
 
 import { productData } from '@/data/products';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 
-type Props = {
+export default function CategoryPage({
+  params,
+}: {
   params: { slug: string };
-};
-
-export default function CategoryPage({ params }: Props) {
+}) {
   const category = productData[params.slug as keyof typeof productData];
 
   if (!category) return notFound();
@@ -35,7 +35,9 @@ export default function CategoryPage({ params }: Props) {
                 <p className="text-sm text-muted-foreground mb-2">
                   {product.description}
                 </p>
-                <p className="text-primary font-bold">₦{product.price.toLocaleString()}</p>
+                <p className="text-primary font-bold">
+                  ₦{product.price.toLocaleString()}
+                </p>
               </CardContent>
             </Card>
           ))}

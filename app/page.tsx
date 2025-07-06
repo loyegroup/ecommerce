@@ -9,6 +9,7 @@ import { Navbar } from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import ProductCategories from '@/components/ProductCategories';
+import FAQ from '@/components/FAQ';
 //import Contact from '@/components/Contact';
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       <Hero />
       <About />
       <ProductCategories />
+      <FAQ />
       {/* <Contact /> */}
     </main>
   );
