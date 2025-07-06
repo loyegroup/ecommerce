@@ -5,11 +5,15 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 
-export default function CategoryPage({
-  params,
-}: {
+type CategoryParams = {
   params: { slug: string };
-}) {
+};
+
+export async function generateStaticParams() {
+  return Object.keys(productData).map((slug) => ({ slug }));
+}
+
+export default async function CategoryPage({ params }: CategoryParams) {
   const category = productData[params.slug as keyof typeof productData];
 
   if (!category) return notFound();

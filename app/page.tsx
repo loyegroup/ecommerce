@@ -10,7 +10,8 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import ProductCategories from '@/components/ProductCategories';
 import FAQ from '@/components/FAQ';
-//import Contact from '@/components/Contact';
+import ContactSection from '@/components/ContactSection';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   useEffect(() => {
@@ -27,7 +28,8 @@ export default function Home() {
       <About />
       <ProductCategories />
       <FAQ />
-      {/* <Contact /> */}
+      <ContactSection />
+      <Footer />
     </main>
   );
 }
