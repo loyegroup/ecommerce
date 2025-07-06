@@ -21,7 +21,7 @@ const ProductCategories = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {Object.entries(productData).map(([slug, category]) => (
-            <Link href={`/categories/${slug}`} key={slug}>
+            <Link href={`/categories?type=${slug}`} key={slug}>
               <Card className="hover:shadow-md transition" data-aos="fade-up">
                 <CardContent className="p-6 text-center">
                   <Badge className="mb-2">{category.name}</Badge>
